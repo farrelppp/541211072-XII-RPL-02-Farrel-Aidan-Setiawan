@@ -52,7 +52,7 @@ module.exports = {
                 message: "Data berhasil ditambahkan"
             })
           } catch (error) {
-            res.status(400).json({success: false})
+            res.status(400).json({success: false, error: error.message})
           }
         },
 

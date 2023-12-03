@@ -1,16 +1,26 @@
 const mongoose = require('mongoose')
 
 const UserSchema = new mongoose.Schema({
-    nama: {
+    ekstrakurikuler: {
         type: String,
-        required: [true, 'Silahkan isikan nama'],
-        unique: true
+        required: [true, 'Silahkan isikan nama ekstrakurikuler'],
+        
     },
-    email: {
+    gurupengawas: {
         type: String,
-        required: true,
-        unique: true,
-        match: [/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/, 'Silahkan isikan email valid']
+        required: [true, 'Silahkan isikan nama guru'],   
+    },
+    jumlahsiswa: {
+        type: String,
+        required: [true, 'Silahkan isikan jumlah siswa'],   
+    },
+    jadwal: {
+        type: String,
+        required: [true, 'Silahkan isikan jadwal pelaksanaan'],   
+    },
+    ruangan: {
+        type: String,
+        required: [true, 'Silahkan isikan ruangan kegiatan'],   
     }
         
     
